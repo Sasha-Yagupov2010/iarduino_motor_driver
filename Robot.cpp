@@ -31,7 +31,7 @@ void Robot::setLDirection(bool direct)
 }
 
 
-void setRSpeed(int newspeed) 
+void Robot::setRSpeed(int newspeed)
 {
 	if (newspeed < 0) RmotorSpeed = 0;
 	else if (newspeed > 255) RmotorSpeed = 255;
@@ -39,7 +39,7 @@ void setRSpeed(int newspeed)
 
 	analogWrite(M2_SpeedPIN, RmotorSpeed);
 }
-void setLSpeed(int newspeed) 
+void Robot::setLSpeed(int newspeed)
 {
 	if (newspeed < 0) LmotorSpeed = 0;
 	else if (newspeed > 255) LmotorSpeed = 255;
