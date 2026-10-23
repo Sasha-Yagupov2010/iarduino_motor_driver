@@ -1,4 +1,4 @@
-#include <Robot.h>
+#include "Robot.h"
 
 void Robot::setupRobot() {
 	pinMode(Motor1PIN, OUTPUT);
@@ -20,6 +20,7 @@ void Robot::stop() {
 }
 
 
+//направление вращения моторов
 void Robot::setRDirection(bool direct)
 {
 	digitalWrite(Motor2PIN, direct);
@@ -30,7 +31,7 @@ void Robot::setLDirection(bool direct)
 	digitalWrite(Motor1PIN, direct);
 }
 
-
+//скорость вращения моторов
 void Robot::setRSpeed(int newspeed)
 {
 	if (newspeed < 0) RmotorSpeed = 0;
