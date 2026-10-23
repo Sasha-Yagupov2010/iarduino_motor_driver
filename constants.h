@@ -8,3 +8,6 @@ constexpr int Motor1PIN = 7;
 constexpr int Motor2PIN = 4;
 constexpr int M1_SpeedPIN = 6;
 constexpr int M2_SpeedPIN = 5;
+
+constexpr bool Ldirection = 1;
+constexpr bool Rdirection = 0;
