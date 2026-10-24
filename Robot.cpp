@@ -6,6 +6,8 @@ void Robot::setupRobot() {
 	pinMode(M1_SpeedPIN, OUTPUT);
 	pinMode(M2_SpeedPIN, OUTPUT);
 
+	servo.attach(servoPin);
+
 	digitalWrite(Motor1PIN, Ldirection);
 	digitalWrite(Motor2PIN, Rdirection);
 
@@ -47,4 +49,13 @@ void Robot::setLSpeed(int newspeed)
 	else LmotorSpeed = newspeed;
 
 	analogWrite(M1_SpeedPIN, LmotorSpeed);
+}
+
+//поворт сервопривода
+void Robot::rotateServo(int angle) {
+	if (angle < 0) angle = 0;
+	if (angle > 180) angle = 180;
+
+	servo.write(angle);
+
 }

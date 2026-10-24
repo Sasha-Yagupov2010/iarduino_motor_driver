@@ -11,3 +11,5 @@ constexpr int M2_SpeedPIN = 5;
 
 constexpr bool Ldirection = 1;
 constexpr bool Rdirection = 0;
+
+constexpr bool servoPin = 9;
