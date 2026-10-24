@@ -17,8 +17,8 @@ void Robot::setupRobot() {
 
 //полная остановка робота
 void Robot::stop() {
-	analogWrite(M1_SpeedPIN, 0);
-	analogWrite(M2_SpeedPIN, 0);
+	setLSpeed(0);
+	setRSpeed(0);
 }
 
 
