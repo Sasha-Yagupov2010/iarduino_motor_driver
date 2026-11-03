@@ -13,6 +13,6 @@ void loop() {
 
 	robot.stop();
 
-	delay(2000;)
+	delay(2000);
 
 }
