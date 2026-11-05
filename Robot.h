@@ -25,6 +25,12 @@ public:
 
 	void rotateServo(int);
 
+	bool button1();
+	bool button2();
+
+	void ledRed(bool);
+	void ledGreen(bool);
+
 };
 
 #endif // !ROBOT_H
