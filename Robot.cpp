@@ -18,6 +18,8 @@ void Robot::setupRobot() {
 	pinMode(LED_GREEN, OUTPUT);
 	pinMode(LED_RED, OUTPUT);
 
+	pinMode(LINE_L_PIN, INPUT);
+	pinMode(LINE_R_PIN, INPUT);
 
 	servo.attach(SERVO_PIN);
 
@@ -100,9 +102,9 @@ int Robot::photoResistor(int inFrom, int inTo,int outFrom, int outTo) {
 
 
 bool Robot::leftLine() {
-	return digitalRead(LINE_L_PIN);
+	return !digitalRead(LINE_L_PIN);
 }
 
-bool Robot::leftRine() {
-	return digitalRead(LINE_R_PIN);
+bool Robot::rightLtine() {
+	return !digitalRead(LINE_R_PIN);
 }
