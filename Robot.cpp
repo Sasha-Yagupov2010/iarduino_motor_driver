@@ -102,9 +102,9 @@ int Robot::photoResistor(int inFrom, int inTo,int outFrom, int outTo) {
 
 
 bool Robot::leftLine() {
-	return !digitalRead(LINE_L_PIN);
+	return !digitalRead(LINE_L_PIN); //TODO: проверить наличие инверсии у конкретных датчиков
 }
 
-bool Robot::rightLtine() {
+bool Robot::rightLine() {
 	return !digitalRead(LINE_R_PIN);
 }
