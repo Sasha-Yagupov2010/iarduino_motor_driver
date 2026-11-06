@@ -31,6 +31,10 @@ public:
 	void ledRed(int); 
 	void ledGreen(int);
 
+	int photoResistor();
+	int photoResistor(int,int);
+	int photoResistor(int, int, int, int);
+
 };
 
 #endif // !ROBOT_H

@@ -84,3 +84,16 @@ void Robot::ledRed(int val) {
 void Robot::ledGreen(int val) {
 	analogWrite(LED_GREEN, get_correct_val(val));
 }
+
+
+int Robot::photoResistor() {
+	return analogRead(PHOTO_PIN);
+}
+
+int Robot::photoResistor(int from, int to) {
+	return map(analogRead(PHOTO_PIN),0,1023,from,to);
+}
+
+int Robot::photoResistor(int inFrom, int inTo,int outFrom, int outTo) {
+	return map(analogRead(PHOTO_PIN), inFrom, inTo, outFrom, outTo);
+}
