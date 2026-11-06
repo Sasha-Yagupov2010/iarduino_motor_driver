@@ -1,25 +1,25 @@
 #pragma once
 
-constexpr int Motor1PIN = 7;
-constexpr int Motor2PIN = 4;
+constexpr int MOTOR_1PIN = 7;
+constexpr int MOTOR_2PIN = 4;
 constexpr int M1_SpeedPIN = 6;
 constexpr int M2_SpeedPIN = 5;
 
 constexpr bool Ldirection = 1;
 constexpr bool Rdirection = 0;
 
-constexpr int servoPin = 12;
+constexpr int SERVO_PIN = 12;
 
-constexpr int LineL = 2;
-constexpr int LineR = 3;
+constexpr int LINE_L_PIN = 2;
+constexpr int LINE_R_PIN = 3;
 
-constexpr int Button1 = 8;
-constexpr int Button2 = A1;
+constexpr int BUTTON1_PIN = 8;
+constexpr int BUTTON2_PIN = A1;
 
-constexpr int LedGreen = 9;
-constexpr int LedRed = 10;
+constexpr int LED_GREEN = 9;
+constexpr int LED_RED = 10;
 
-constexpr int PhotoR = A0;
+constexpr int PHOTO_PIN = A0;
 
 constexpr int FrontTrig = A2;
 constexpr int FrontEcho = A3;

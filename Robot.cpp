@@ -8,21 +8,21 @@ int get_correct_val(int val) {
 }
 
 void Robot::setupRobot() {
-	pinMode(Motor1PIN, OUTPUT);
-	pinMode(Motor2PIN, OUTPUT);
+	pinMode(MOTOR_1PIN, OUTPUT);
+	pinMode(MOTOR_2PIN, OUTPUT);
 	pinMode(M1_SpeedPIN, OUTPUT);
 	pinMode(M2_SpeedPIN, OUTPUT);
 
-	pinMode(Button1,INPUT_PULLUP);
-	pinMode(Button2, INPUT_PULLUP); //TODO: узнать как подключаются кнопки
-	pinMode(LedGreen, OUTPUT);
-	pinMode(LedRed, OUTPUT);
+	pinMode(BUTTON1_PIN,INPUT_PULLUP);
+	pinMode(BUTTON2_PIN, INPUT_PULLUP); //TODO: узнать как подключаются кнопки
+	pinMode(LED_GREEN, OUTPUT);
+	pinMode(LED_RED, OUTPUT);
 
 
-	servo.attach(servoPin);
+	servo.attach(SERVO_PIN);
 
-	digitalWrite(Motor1PIN, Ldirection);
-	digitalWrite(Motor2PIN, Rdirection);
+	digitalWrite(MOTOR_1PIN, Ldirection);
+	digitalWrite(MOTOR_2PIN, Rdirection);
 
 	analogWrite(M1_SpeedPIN, 0);
 	analogWrite(M2_SpeedPIN, 0);
@@ -38,12 +38,12 @@ void Robot::stop() {
 //направление вращения моторов
 void Robot::setRDirection(bool direct)
 {
-	digitalWrite(Motor2PIN, direct);
+	digitalWrite(MOTOR_2PIN, direct);
 }
 
 void Robot::setLDirection(bool direct)
 {
-	digitalWrite(Motor1PIN, direct);
+	digitalWrite(MOTOR_1PIN, direct);
 }
 
 //скорость вращения моторов
@@ -69,19 +69,18 @@ void Robot::rotateServo(int angle) {
 
 
 bool Robot::button1() {
-	return !digitalRead(Button1);
+	return !digitalRead(BUTTON1_PIN);
 }
 
 bool Robot::button2() {
-	return !digitalRead(Button2);
+	return !digitalRead(BUTTON2_PIN);
 }
 
 
 void Robot::ledRed(int val) {
-
-	analogWrite(LedRed, get_correct_val(val));
+	analogWrite(LED_RED, get_correct_val(val));
 }
 
 void Robot::ledGreen(int val) {
-	analogWrite(LedGreen, get_correct_val(val));
+	analogWrite(LED_GREEN, get_correct_val(val));
 }
