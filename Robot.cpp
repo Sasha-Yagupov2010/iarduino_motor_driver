@@ -97,3 +97,12 @@ int Robot::photoResistor(int from, int to) {
 int Robot::photoResistor(int inFrom, int inTo,int outFrom, int outTo) {
 	return map(analogRead(PHOTO_PIN), inFrom, inTo, outFrom, outTo);
 }
+
+
+bool Robot::leftLine() {
+	return digitalRead(LINE_L_PIN);
+}
+
+bool Robot::leftRine() {
+	return digitalRead(LINE_R_PIN);
+}

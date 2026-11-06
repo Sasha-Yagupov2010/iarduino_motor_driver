@@ -35,6 +35,9 @@ public:
 	int photoResistor(int,int);
 	int photoResistor(int, int, int, int);
 
+	bool leftLine();
+	bool rightLine();
+
 };
 
 #endif // !ROBOT_H
