@@ -38,15 +38,16 @@ void Robot::stop() {
 
 
 //направление вращения моторов
-void Robot::setRDirection(bool direct)
+void Robot::setRDirection(Direction direct)
 {
-	digitalWrite(MOTOR_2PIN, direct);
+	digitalWrite(MOTOR_2PIN, direct==FORWARD);
 }
 
-void Robot::setLDirection(bool direct)
+void Robot::setLDirection(Direction direct)
 {
-	digitalWrite(MOTOR_1PIN, direct);
+	digitalWrite(MOTOR_1PIN, direct==FORWARD);
 }
+
 
 //скорость вращения моторов
 void Robot::setRSpeed(int newspeed)

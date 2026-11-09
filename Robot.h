@@ -4,6 +4,12 @@
 #include <Servo.h>
 #include "constants.h"
 
+enum Direction {
+	FORWARD,
+	BACKWARD
+};
+
+
 class Robot {
 private:
 	Servo servo;
@@ -17,8 +23,8 @@ public:
 	void setupRobot();
 	void stop();
 
-	void setRDirection(bool);
-	void setLDirection(bool);
+	void setRDirection(Direction);
+	void setLDirection(Direction);
 
 	void setRSpeed(int);
 	void setLSpeed(int);

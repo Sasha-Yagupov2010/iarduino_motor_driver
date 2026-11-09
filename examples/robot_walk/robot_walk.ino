@@ -3,9 +3,13 @@ Robot robot;
 
 void setup() {
 	robot.setupRobot();
+
 }
 
 void loop() {
+	robot.setLDirection(FORWARD);
+	robot.setDirection(BACKWARD);
+
 	robot.setLSpeed(150);
 	robot.setRSpeed(150);
 
