@@ -108,3 +108,29 @@ bool Robot::leftLine() {
 bool Robot::rightLine() {
 	return !digitalRead(LINE_R_PIN);
 }
+
+
+
+long measureDistance(int trigPin, int echoPin) {
+	digitalWrite(trigPin, LOW);
+	delayMicroseconds(2);
+	digitalWrite(trigPin, HIGH);
+	delayMicroseconds(10);
+	digitalWrite(trigPin, LOW);
+
+	long duration = pulseIn(echoPin, HIGH, 15000);// таймаут 15 мс = 15000 мкс
+
+	if (duration == 0) {
+		return -1;
+	}
+	return duration * 0.034 / 2;
+}
+
+
+long Robot::getFrontDistance() {
+	return measureDistance(FrontTrig, FrontEcho);
+}
+
+long Robot::getLeftDistance() {
+	return measureDistance(LeftTrig, LeftEcho);
+}

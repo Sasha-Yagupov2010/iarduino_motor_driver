@@ -38,6 +38,8 @@ public:
 	bool leftLine();
 	bool rightLine();
 
+	long getFrontDistance();
+	long getLeftDistance();
 };
 
 #endif // !ROBOT_H
