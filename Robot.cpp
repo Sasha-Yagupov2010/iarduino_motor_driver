@@ -14,7 +14,7 @@ void Robot::setupRobot() {
 	pinMode(M2_SpeedPIN, OUTPUT);
 
 	pinMode(BUTTON1_PIN,INPUT_PULLUP);
-	pinMode(BUTTON2_PIN, INPUT_PULLUP); //TODO: узнать как подключаются кнопки
+	pinMode(BUTTON2_PIN, INPUT_PULLUP); //TODO: кнопки!
 	pinMode(LED_GREEN, OUTPUT);
 	pinMode(LED_RED, OUTPUT);
 
@@ -103,7 +103,7 @@ int Robot::photoResistor(int inFrom, int inTo,int outFrom, int outTo) {
 
 
 bool Robot::leftLine() {
-	return !digitalRead(LINE_L_PIN); //TODO: проверить наличие инверсии у конкретных датчиков
+	return !digitalRead(LINE_L_PIN); 
 }
 
 bool Robot::rightLine() {

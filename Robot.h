@@ -13,7 +13,7 @@ enum Direction {
 class Robot {
 private:
 	Servo servo;
-	int LmotorSpeed = 0; //на всякий случай
+	int LmotorSpeed = 0; 
 	int RmotorSpeed = 0;
 
 	//int Ldir = Ldirection;

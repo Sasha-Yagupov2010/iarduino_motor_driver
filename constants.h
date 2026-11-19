@@ -21,7 +21,7 @@ constexpr int LED_RED = 10;
 
 constexpr int PHOTO_PIN = A0;
 
-constexpr int FrontTrig = A2;
-constexpr int FrontEcho = A3;
-constexpr int LeftTrig = A4;
-constexpr int LeftEcho = A5;
+constexpr int FrontTrig = A4;
+constexpr int FrontEcho = A5;
+constexpr int LeftTrig = A2;
+constexpr int LeftEcho = A3;

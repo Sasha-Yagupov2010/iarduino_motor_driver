@@ -8,7 +8,7 @@ void setup() {
 
 void loop() {
 	robot.setLDirection(FORWARD);
-	robot.setDirection(BACKWARD);
+	robot.setRDirection(BACKWARD);
 
 	robot.setLSpeed(150);
 	robot.setRSpeed(150);
