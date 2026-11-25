@@ -21,6 +21,12 @@ void Robot::setupRobot() {
 	pinMode(LINE_L_PIN, INPUT);
 	pinMode(LINE_R_PIN, INPUT);
 
+	pinMode(FrontTrig, OUTPUT);
+	pinMode(FrontEcho, INPUT);
+	pinMode(LeftTrig, OUTPUT);
+	pinMode(LeftEcho, INPUT);
+
+	delay(100);
 	servo.attach(SERVO_PIN);
 
 	digitalWrite(MOTOR_1PIN, Ldirection);
@@ -80,12 +86,12 @@ bool Robot::button2() {
 }
 
 
-void Robot::ledRed(int val) {
-	analogWrite(LED_RED, get_correct_val(val));
+void Robot::ledRed(bool val) {
+	digitalWrite(LED_RED, val);
 }
 
-void Robot::ledGreen(int val) {
-	analogWrite(LED_GREEN, get_correct_val(val));
+void Robot::ledGreen(bool val) {
+	digitalWrite(LED_GREEN, val);
 }
 
 
