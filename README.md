@@ -45,15 +45,16 @@ void loop(){
 
 * bool button1(); - получить состояние первой кнопки
 * bool button2(); - получить состояние второй кнопки
+> кнопки подключены как INPUT_PULLUP
 
-* void ledRed(int); - яркость красного светодиода 0-255
-* void ledGreen(int); - яркость зеленого светодиода 0-255
+* void ledRed(); - присвоить состояние красному светодиоду true/false
+* void ledGreen(); - присвоить состояние зеленому светодиоду true/false
 
 * int photoResistor(); - вернет напряжение на А0 0-1023
-* 
+ 
 > так же есть перегрузки:
-* int photoResistor(int from,int to); - вернет напряжение на А0 через map 0-1023 переведет в вид from to
-* int photoResistor(int from1, int to1, int from2, int to2); - вернет напряжение на А0 через map from1 to1 переведет в вид from2 to2
+* int photoResistor(int from,int to); - вернет напряжение на А0 через map 0-1023 переведет в вид map(analogRead(pin),0,1023,from,to)
+* int photoResistor(int from1, int to1, int from2, int to2); - вернет напряжение на А0 в диапазоне map(analogRead(pin),from,to,from2,to2)
 
 
 * bool leftLine(); - вернет состояние левого датчика линии

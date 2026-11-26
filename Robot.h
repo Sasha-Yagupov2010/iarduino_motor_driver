@@ -34,8 +34,8 @@ public:
 	bool button1();
 	bool button2();
 
-	void ledRed(int); 
-	void ledGreen(int);
+	void ledRed(bool); 
+	void ledGreen(bool);
 
 	int photoResistor();
 	int photoResistor(int,int);

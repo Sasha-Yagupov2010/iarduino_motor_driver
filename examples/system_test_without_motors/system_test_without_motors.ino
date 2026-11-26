@@ -31,8 +31,8 @@ void loop() {
         Serial.print("Правый ИК: "); Serial.println(robot.rightLine());
         Serial.print("Фоторезистор: "); Serial.println(robot.photoResistor());
         
-        if (robot.button1()) robot.ledRed(255); else robot.ledRed(50);
-        if (robot.button2()) robot.ledGreen(255); else robot.ledGreen(50);
+        if (robot.button1()) robot.ledRed(1); else robot.ledRed(0);
+        if (robot.button2()) robot.ledGreen(1); else robot.ledGreen(0);
     }
 
     if (now - lastServoTime >= 20) {

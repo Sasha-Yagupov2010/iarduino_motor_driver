@@ -7,18 +7,18 @@ void setup() {
 
 void loop() {
 	if(robot.button1()){
-		robot.ledRed(255);
+		robot.ledRed(1);
 	}
 	else{
-	robot.ledRed(50);
+	robot.ledRed(0);
 	}
 
 
 	if(robot.button2()){
-		robot.ledGreen(255);
+		robot.ledGreen(1);
 	}
 	else{
-	robot.ledGreen(50);
+	robot.ledGreen(0);
 	}
 
 

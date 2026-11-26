@@ -14,7 +14,7 @@ void Robot::setupRobot() {
 	pinMode(M2_SpeedPIN, OUTPUT);
 
 	pinMode(BUTTON1_PIN,INPUT_PULLUP);
-	pinMode(BUTTON2_PIN, INPUT_PULLUP); //TODO: кнопки!
+	pinMode(BUTTON2_PIN, INPUT_PULLUP); 
 	pinMode(LED_GREEN, OUTPUT);
 	pinMode(LED_RED, OUTPUT);
 
@@ -36,14 +36,12 @@ void Robot::setupRobot() {
 	analogWrite(M2_SpeedPIN, 0);
 }
 
-//полная остановка робота
 void Robot::stop() {
 	setLSpeed(0);
 	setRSpeed(0);
 }
 
 
-//направление вращения моторов
 void Robot::setRDirection(Direction direct)
 {
 	digitalWrite(MOTOR_2PIN, direct==FORWARD);
@@ -55,7 +53,6 @@ void Robot::setLDirection(Direction direct)
 }
 
 
-//скорость вращения моторов
 void Robot::setRSpeed(int newspeed)
 {
 	RmotorSpeed = get_correct_val(newspeed);
@@ -67,7 +64,7 @@ void Robot::setLSpeed(int newspeed)
 	analogWrite(M1_SpeedPIN, LmotorSpeed);
 }
 
-//поворт сервопривода
+
 void Robot::rotateServo(int angle) {
 	if (angle < 0) angle = 0;
 	if (angle > 180) angle = 180;
@@ -125,7 +122,7 @@ long measureDistance(int trigPin, int echoPin) {
 	delayMicroseconds(10);
 	digitalWrite(trigPin, LOW);
 
-	long duration = pulseIn(echoPin, HIGH, 15000);// таймаут 15 мс = 15000 мкс
+	long duration = pulseIn(echoPin, HIGH, 15000);// timeout - 15 ms
 
 	if (duration == 0) {
 		return -1;
